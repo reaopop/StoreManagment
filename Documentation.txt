@@ -1,0 +1,65 @@
+interface IPerson
+    {
+        bool  Smart { get; set; }
+        bool Head();
+        void LeftFoot();
+        void RightFoot();
+        void LeftHand();
+        void RightHand();
+    }
+    public class Mohamed : IPerson
+    {
+        public bool Smart { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public bool Head()
+        {
+            return false;
+        }
+
+        public void LeftFoot()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void LeftHand()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RightFoot()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RightHand()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    public class Ahmed : IPerson
+    {
+        public bool Head()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void LeftFoot()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void LeftHand()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RightFoot()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RightHand()
+        {
+            throw new NotImplementedException();
+        }
+    }

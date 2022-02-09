@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+	<product>
+		<food>
+			<meat>
+				<ID>01</ID>
+				<name>Pork</name>
+				<price >100</price>
+				<quantity>50</quantity>
+			</meat>
+			<meat>
+				<ID>02</ID>
+				<name>Chicken</name>
+				<price >110</price>
+				<quantity>60</quantity>
+			</meat>
+			<meat>
+				<ID>03</ID>
+				<name>Turkey</name>
+				<price >120</price>
+				<quantity>70</quantity>
+			</meat>
+			<meat>
+				<ID>04</ID>
+				<name>Beef</name>
+				<price >130</price>
+				<quantity>80</quantity>
+			</meat>
+			<meat>
+				<ID>05</ID>
+				<name>Lamp</name>
+				<price >140</price>
+				<quantity>75</quantity>
+			</meat>
+		
+		<Bread>
+			<ID>06</ID>
+			<name>White Bread</name>
+			<quantity>30</quantity>
+			<price>5</price>
+		</Bread>
+		<Bread>
+			<ID>07</ID>
+			<name>Baguette</name>
+			<quantity>25</quantity>
+			<price>6</price>
+		</Bread>
+		<Bread>
+			<ID>08</ID>
+			<name>Ciabatta</name>
+			<quantity>35</quantity>
+			<price>7</price>
+		</Bread>
+		<Bread>
+			<ID>09</ID>
+			<name>Corn Bread</name>
+			<quantity>31</quantity>
+			<price>9</price>
+		</Bread>
+		<Bread>
+			<ID>10</ID>
+			<name>Muligrian Bread</name>
+			<quantity>30</quantity>
+			<price>4</price>
+		</Bread>
+			
+			<cakes>
+				<ID>11</ID>
+				<name>Butter Cake</name>
+				<price>2</price>
+				<quantity>45</quantity>
+			</cakes>
+			<cakes>
+				<ID>12</ID>
+				<name>Pound Cake</name>
+				<price>4</price>
+				<quantity>45</quantity>
+			</cakes>
+			<cakes>
+				<ID>13</ID>
+				<name>Sponge Cake</name>
+				<price>5</price>
+				<quantity>40</quantity>
+			</cakes>
+			<cakes>
+				<ID>14</ID>
+				<name>Biscuit Cake</name>
+				<price>4</price>
+				<quantity>35</quantity>
+			</cakes>
+			<cakes>
+				<ID>15</ID>
+				<name>Carrot Cake</name>
+				<price>2</price>
+				<quantity>45</quantity>
+			</cakes>
+			
+			<vegatable>
+				<ID>16</ID>
+				<name>Broccoli</name>
+				<price>5</price>
+				<quantity>20</quantity>
+			</vegatable>
+			<vegatable>
+				<ID>17</ID>
+				<name>Potato</name>
+				<price>2</price>
+				<quantity>40</quantity>
+			</vegatable>
+			<vegatable>
+				<ID>18</ID>
+				<name>Cucumber</name>
+				<price>2</price>
+				<quantity>25</quantity>
+			</vegatable>
+			<vegatable>
+				<ID>19</ID>
+				<name>Zucchini</name>
+				<price>6</price>
+				<quantity>50</quantity>
+			</vegatable>
+			<vegatable>
+				<ID>20</ID>
+				<name>Onion</name>
+				<price>3</price>
+				<quantity>30</quantity>
+			</vegatable>
+			
+			<fruits>
+				<ID>21</ID>
+				<name>Apple</name>
+				<price>2</price>
+				<quantity>19</quantity>
+			</fruits>
+			<fruits>
+				<ID>22</ID>
+				<name>Banana</name>
+				<price>2</price>
+				<quantity>22</quantity>
+			</fruits>
+			<fruits>
+				<ID>23</ID>
+				<name>WaterMelones</name>
+				<price>4</price>
+				<quantity>30</quantity>
+			</fruits>
+			<fruits>
+				<ID>24</ID>
+				<name>Peach</name>
+				<price>3</price>
+				<quantity>35</quantity>
+			</fruits>
+			<fruits>
+				<ID>25</ID>
+				<name>Kiwi</name>
+				<price>3</price>
+				<quantity>25</quantity>
+			</fruits>
+		</food>
+		<drinks>
+			<water>
+				<ID>26</ID>
+				<name>Mineral Water</name>
+				<price>1</price>
+				<quantity>20</quantity>
+			</water>
+			<water>
+				<ID>27</ID>
+				<name>Spring  Water</name>
+				<price>1</price>
+				<quantity>22</quantity>
+			</water>
+			<water>
+				<ID>28</ID>
+				<name>Distilled Water</name>
+				<price>2</price>
+				<quantity>25</quantity>
+			</water>
+			<water>
+				<ID>29</ID>
+				<name>Flavored Water</name>
+				<price>1</price>
+				<quantity>30</quantity>
+			</water>
+			<water>
+				<ID>30</ID>
+				<name>Alkaline Water</name>
+				<price>2</price>
+				<quantity>40</quantity>
+			</water>
+			
+			<tea>
+				<ID>31</ID>
+				<name>Green Tea</name>
+				<price>2</price>
+				<quantity>50</quantity>
+			</tea>
+			<tea>
+				<ID>32</ID>
+				<name>Black Tea</name>
+				<price>2</price>
+				<quantity>55</quantity>
+			</tea>
+			<tea>
+				<ID>33</ID>
+				<name>White Tea</name>
+				<price>3</price>
+				<quantity>60</quantity>
+			</tea>
+			<tea>
+				<ID>34</ID>
+				<name>Oolong Tea</name>
+				<price>2</price>
+				<quantity>65</quantity>
+			</tea>
+			<tea>
+				<ID>35</ID>
+				<name>Herbal Tea</name>
+				<price>5</price>
+				<quantity>80</quantity>
+			</tea>
+			
+			<softdrinks>
+				<ID>36</ID>
+				<name>Fanta</name>
+				<price>3</price>
+				<quantity>80</quantity>
+			</softdrinks>
+			<softdrinks>
+				<ID>37</ID>
+				<name>Cola</name>
+				<price>2</price>
+				<quantity>85</quantity>
+			</softdrinks>
+			<softdrinks>
+				<ID>38</ID>
+				<name>Sprite</name>
+				<price>2</price>
+				<quantity>60</quantity>
+			</softdrinks>
+			<softdrinks>
+				<ID>39</ID>
+				<name>Pepsi</name>
+				<price>1</price>
+				<quantity>46</quantity>
+			</softdrinks>
+			<softdrinks>
+				<ID>40</ID>
+				<name>Almdudler</name>
+				<price>1</price>
+				<quantity>50</quantity>
+			</softdrinks>
+			
+			<wine>
+				<ID>41</ID>
+				<name>Red Wine</name>
+				<price>10</price>
+				<quantity>200</quantity>
+			</wine>
+			<wine>
+				<ID>42</ID>
+				<name>White Wine</name>
+				<price>8</price>
+				<quantity>150</quantity>
+			</wine>
+			<wine>
+				<ID>43</ID>
+				<name>Rose Wine</name>
+				<price>7</price>
+				<quantity>100</quantity>
+			</wine>
+			<wine>
+				<ID>44</ID>
+				<name>Sparkling Wine</name>
+				<price>5</price>
+				<quantity>130</quantity>
+			</wine>
+			<wine>
+				<ID>45</ID>
+				<name>Dessert Wine</name>
+				<price>8</price>
+				<quantity>90</quantity>
+			</wine>
+			
+			<beer>
+				<ID>46</ID>
+				<name>Stiegl</name>
+				<price>1</price>
+				<quantity>70</quantity>
+			</beer>
+			<beer>
+				<ID>47</ID>
+				<name>Zipfer</name>
+				<price>1</price>
+				<quantity>100</quantity>
+			</beer>
+			<beer>
+				<ID>48</ID>
+				<name>Heinken</name>
+				<price>1</price>
+				<quantity>55</quantity>
+			</beer>
+			<beer>
+				<ID>49</ID>
+				<name>Ottakringer</name>
+				<price>2</price>
+				<quantity>60</quantity>
+			</beer>
+			<beer>
+				<ID>50</ID>
+				<name>Gosser</name>
+				<price>1</price>
+				<quantity>90</quantity>
+			</beer>
+	</drinks>
+		<hygiene>
+			<naturcosmitics>
+				<ID>51</ID>
+				<name>Skin Care</name>
+				<price>3</price>
+				<quantity>40</quantity>
+			</naturcosmitics>
+			<naturalcosmitics>
+				<ID>52</ID>
+				<name>Hair Care</name>
+				<price>4</price>
+				<quantity>50</quantity>
+			</naturalcosmitics>
+			<naturalcosmitics>
+				<ID>53</ID>
+				<name>Body Care</name>
+				<price>5</price>
+				<quantity>100</quantity>
+			</naturalcosmitics>
+			<naturalcosmitics>
+				<ID>54</ID>
+				<name>Face Masks</name>
+				<price>6</price>
+				<quantity>90</quantity>
+			</naturalcosmitics>
+			<naturalcosmitics>
+				<ID>55</ID>
+				<name>Lips Care</name>
+				<price>2</price>
+				<quantity>65</quantity>
+			</naturalcosmitics>
+			
+			<feminine_hygiene>
+				<ID>56</ID>
+				<name>Tampons</name>
+				<price>12</price>
+				<quantity>200</quantity>
+			</feminine_hygiene>
+			<feminine_hygiene>
+				<ID>57</ID>
+				<name>Peroid Panties</name>
+				<price>5</price>
+				<quantity>210</quantity>
+			</feminine_hygiene>
+			<feminine_hygiene>
+				<ID>58</ID>
+				<name>PantyLiners</name>
+				<price>6</price>
+				<quantity>300</quantity>
+			</feminine_hygiene>
+			<feminine_hygiene>
+				<ID>59</ID>
+				<name>Menstrual Cups</name>
+				<price>10</price>
+				<quantity>150</quantity>
+			</feminine_hygiene>
+			<feminine_hygiene>
+				<ID>60</ID>
+				<name>Sanitary Napkins</name>
+				<price>15</price>
+				<quantity>220</quantity>
+			</feminine_hygiene>
+
+			<musculine_hygiene>
+				<ID>61</ID>
+				<name>After Shave</name>
+				<price>4</price>
+				<quantity>40</quantity>
+			</musculine_hygiene>
+			<musculine_hygiene>
+				<ID>62</ID>
+				<name>Shaving Cream</name>
+				<price>3</price>
+				<quantity>70</quantity>
+			</musculine_hygiene>
+			<musculine_hygiene>
+				<ID>63</ID>
+				<name>Razor</name>
+				<price>6</price>
+				<quantity>100</quantity>
+			</musculine_hygiene>
+			<musculine_hygiene>
+				<ID>64</ID>
+				<name>beard Oil</name>
+				<price>7</price>
+				<quantity>90</quantity>
+			</musculine_hygiene>
+			<musculine_hygiene>
+				<ID>65</ID>
+				<name>Trimmer</name>
+				<price>3</price>
+				<quantity>70</quantity>
+			</musculine_hygiene>
+
+			<toiletries>
+				<ID>66</ID>
+				<name>Toilet Paper</name>
+				<price>1</price>
+				<quantity>400</quantity>
+			</toiletries>
+			<toiletries>
+				<ID>67</ID>
+				<name>Toilet Brush</name>
+				<price>3</price>
+				<quantity>500</quantity>
+			</toiletries>
+			<toiletries>
+				<ID>68</ID>
+				<name>Air Fresher</name>
+				<price>5</price>
+				<quantity>150</quantity>
+			</toiletries>
+			<toiletries>
+				<ID>69</ID>
+				<name>Soup</name>
+				<price>2</price>
+				<quantity>100</quantity>
+			</toiletries>
+			<toiletries>
+				<ID>70</ID>
+				<name>Hand Sanitizer</name>
+				<price>4</price>
+				<quantity>350</quantity>
+			</toiletries>
+
+			<baby_hygine>
+				<ID>71</ID>
+				<name>Baby Powder</name>
+				<price>5</price>
+				<quantity>110</quantity>
+			</baby_hygine>
+			<baby_hygine>
+				<ID>72</ID>
+				<name>Baby Oil</name>
+				<price>6</price>
+				<quantity>190</quantity>
+			</baby_hygine>
+			<baby_hygine>
+				<ID>73</ID>
+				<name>wet Wipes</name>
+				<price>3</price>
+				<quantity>150</quantity>
+			</baby_hygine>
+			<baby_hygine>
+				<ID>74</ID>
+				<name>Dummy</name>
+				<price>3</price>
+				<quantity>200</quantity>
+			</baby_hygine>
+			<baby_hygine>
+				<ID>75</ID>
+				<name>Pampers</name>
+				<price>10</price>
+				<quantity>170</quantity>
+			</baby_hygine>
+			
+		</hygiene>
+	</product>
+	
+</Products>
