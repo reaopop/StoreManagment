@@ -22,7 +22,7 @@ namespace StoreManagement.View
             Type = type;
             newToolStripMenuItem.PerformClick();
         }
-        public frm_Invoices(Master.InvoiceType type , int InvoiceID)
+        public frm_Invoices(Master.InvoiceType type, int InvoiceID)
         {
             InitializeComponent();
             invoice = Database.InvoiceHeader.FirstOrDefault(x => x.ID == InvoiceID);
@@ -37,8 +37,6 @@ namespace StoreManagement.View
         #endregion
 
         #region Events
-
-
         private void frm_Invoices_Load(object sender, EventArgs e)
         {
             cmb_Items.SelectedIndexChanged += Cmb_Items_SelectedIndexChanged;
@@ -54,7 +52,7 @@ namespace StoreManagement.View
             cmb_Items.DisplayMember = nameof(Product.Name);
             cmb_Items.ValueMember = nameof(Product.ID);
             dataGridView1.DataSource = invoiceDetails;
-            
+
 
             txt_Total.ReadOnly = true;
             txt_Nat.ReadOnly = true;
@@ -72,28 +70,24 @@ namespace StoreManagement.View
                     break;
             }
         }
-
         private void Frm_Invoices_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Return)
             {
                 btn_AddToGrid.PerformClick();
-               
+
             }
         }
-
         private void Dt_Qty_TextChanged(object sender, EventArgs e)
         {
             if (dt_Qty.Text.Trim() == string.Empty || dt_Price.Text.Trim() == string.Empty) return;
-           dt_Total.Text = (Convert.ToDouble(dt_Qty.Text.Trim()) * Convert.ToDouble(dt_Price.Text.Trim())).ToString();
+            dt_Total.Text = (Convert.ToDouble(dt_Qty.Text.Trim()) * Convert.ToDouble(dt_Price.Text.Trim())).ToString();
             Txt_Total_TextChanged(null, null);
         }
-
         private void DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             Txt_Total_TextChanged(null, null);
         }
-
         private void Txt_Total_TextChanged(object sender, EventArgs e)
         {
             var Data = dataGridView1.DataSource as List<InvoiceDetails>;
@@ -101,9 +95,8 @@ namespace StoreManagement.View
             txt_Total.Text = Data.Sum(x => x.Total).ToString();
             txt_Nat.Text = (Convert.ToDouble(txt_Total.Text.Trim()) - Convert.ToDouble(txt_Discount.Text.Trim())).ToString();
             var ID = ((Product)cmb_Items.SelectedItem).ID;
-            txt_Balance.Text = ((Database.InvoiceDetails.Where(x=> x.ItemID == ID &&  Database.InvoiceHeader.FirstOrDefault(z=>z.ID ==  x.InvoiceID).InvoiceType == (int)Master.InvoiceType.Purchese).Sum(x=> (double?)x.Qty)??0) - (Database.InvoiceDetails.Where(x => x.ItemID == ID && Database.InvoiceHeader.FirstOrDefault(z => z.ID == x.InvoiceID).InvoiceType == (int)Master.InvoiceType.Sales).Sum(x => (double?)x.Qty)??0)).ToString();
+            txt_Balance.Text = ((Database.InvoiceDetails.Where(x => x.ItemID == ID && Database.InvoiceHeader.FirstOrDefault(z => z.ID == x.InvoiceID).InvoiceType == (int)Master.InvoiceType.Purchese).Sum(x => (double?)x.Qty) ?? 0) - (Database.InvoiceDetails.Where(x => x.ItemID == ID && Database.InvoiceHeader.FirstOrDefault(z => z.ID == x.InvoiceID).InvoiceType == (int)Master.InvoiceType.Sales).Sum(x => (double?)x.Qty) ?? 0)).ToString();
         }
-
         private void Cmb_Items_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmb_Items.SelectedItem == null) return;
@@ -121,28 +114,23 @@ namespace StoreManagement.View
                 default:
                     break;
             }
-            
-            
-        }
 
+
+        }
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetData();
             Add();
             newToolStripMenuItem.PerformClick();
         }
-
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Delete();
         }
-
-        // If you need
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             New();
@@ -170,10 +158,9 @@ namespace StoreManagement.View
                 Txt_Total_TextChanged(null, null);
             }
         }
-
         private void btn_DeleteFromGrid_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
                 var Data = dataGridView1.DataSource as List<InvoiceDetails>;
                 for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
@@ -184,15 +171,11 @@ namespace StoreManagement.View
                 }
             }
         }
-
         private void btn_EditRowFromGrid_Click(object sender, EventArgs e)
         {
 
         }
-
         #endregion
-
-
 
         #region Helper
         void GetData()
@@ -200,7 +183,7 @@ namespace StoreManagement.View
             dataGridView1.DataSource = invoiceDetails;
             txt_InvoiceID.Text = invoice.ID.ToString();
             txt_Discount.Text = invoice.Discount.ToString();
-            txt_Nat.Text = invoice.Nat.ToString() ;
+            txt_Nat.Text = invoice.Nat.ToString();
             txt_Total.Text = invoice.Total.ToString();
             dt_Date.Value = invoice.PostDate;
         }
@@ -210,7 +193,7 @@ namespace StoreManagement.View
             invoice.Discount = Convert.ToDouble(txt_Discount.Text.Trim());
             invoice.InvoiceType = (byte)Type;
             invoice.Nat = Convert.ToDouble(txt_Nat.Text.Trim());
-            invoice.Total = Convert.ToDouble(txt_Total.Text.Trim()) ;
+            invoice.Total = Convert.ToDouble(txt_Total.Text.Trim());
             invoice.PostDate = dt_Date.Value;
 
         }
@@ -219,10 +202,7 @@ namespace StoreManagement.View
 
         }
 
-
-
         #endregion
 
-       
     }
 }

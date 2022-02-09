@@ -32,7 +32,7 @@ namespace StoreManagement.ViewModel
             {
                 if (Database.UserAccess.Where(x => x.UserID == Master.ThisUser.ID && x.AccessName == "Add Products" && (bool)x.Value == true).Count() > 0)
                 {
-                    Pro.ID =( Database.Products.Max(x =>(int?) x.ID)??0) + 1;
+                    Pro.ID = (Database.Products.Max(x => (int?)x.ID) ?? 0) + 1;
                     xmlSer.CreateOrUpdateProduct(Pro);
                     //Database.Products.Add(Pro);
                     Result = true;
@@ -58,7 +58,6 @@ namespace StoreManagement.ViewModel
             }
 
         }
-
         public void Delete()
         {
             if (MessageBox.Show(text: "Catogorie will be deleted!......Do you want to countiue?", caption: "Delete", icon: MessageBoxIcon.Question, buttons: MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -68,18 +67,16 @@ namespace StoreManagement.ViewModel
                     //Database.Products.Remove(Pro);
                     xmlSer.DeleteProduct(Pro);
                     MessageBox.Show("It has been succssfuly deleted!");
-                  
+
                 }
                 else MessageBox.Show("Sorry dont have athoriyation for deleting ");
 
             }
         }
-
         public void New()
         {
-            Pro = new Product() { };    
+            Pro = new Product() { };
         }
-
         public void RefreshData()
         {
             throw new NotImplementedException();
@@ -89,7 +86,6 @@ namespace StoreManagement.ViewModel
             int Exceptions = 0;
             return true;
         }
-
         #endregion
     }
 }

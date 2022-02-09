@@ -8,15 +8,13 @@ using System.Windows.Forms;
 
 namespace StoreManagement.ViewModel
 {
-    public class HomeVM:Form,IFormMain
+    public class HomeVM : Form, IFormMain
     {
         #region Constractor
         public HomeVM()
         {
 
         }
-
-
         #endregion
 
         #region MainProperty
@@ -28,22 +26,18 @@ namespace StoreManagement.ViewModel
         {
             throw new NotImplementedException();
         }
-
         public void Delete()
         {
             throw new NotImplementedException();
         }
-
         public void New()
         {
             throw new NotImplementedException();
         }
-
         public void RefreshData()
         {
             throw new NotImplementedException();
         }
-
         bool IFormMain.Validate()
         {
             return true;

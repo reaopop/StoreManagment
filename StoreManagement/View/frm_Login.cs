@@ -15,6 +15,15 @@ namespace StoreManagement.View
 {
     public partial class frm_Login : LoginVM
     {
+        #region Constractor
+        public frm_Login()
+        {
+            InitializeComponent();
+            //FillData();
+        }
+        #endregion
+
+        #region Helper
         void FillData()
         {
             XMLAccessUserSerializer acc = new XMLAccessUserSerializer();
@@ -38,12 +47,6 @@ namespace StoreManagement.View
                 usr.CreateOrUpdateUser(item);
             }
         }
-        public frm_Login()
-        {
-            InitializeComponent();
-            //FillData();
-        }
-        
         private void btn_Login_Click(object sender, EventArgs e)
         {
             LoginMethod();
@@ -62,17 +65,16 @@ namespace StoreManagement.View
                 }
                 else
                     MessageBox.Show("Username or Password is incorrect !!");
-
             }
         }
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void btn_Admin_Click(object sender, EventArgs e)
         {
             new frm_AboutMe().Show();
         }
+        #endregion
     }
 }

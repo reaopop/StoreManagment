@@ -13,7 +13,6 @@ namespace StoreManagement.ViewModel
     public class AddCategoriesVM : Form, IFormMain
     {
         #region Constractor
-
         public AddCategoriesVM()
         {
             xmlUni = new XMLUnitesSerializer();
@@ -21,7 +20,6 @@ namespace StoreManagement.ViewModel
         #endregion
 
         #region MainProperty
-
         public Unites uni { get; set; }
         XMLUnitesSerializer xmlUni;
         #endregion
@@ -31,9 +29,8 @@ namespace StoreManagement.ViewModel
         {
             if (uni.ID == 0)
             {
-                uni.ID = (Database.Units.Max(x => (int?)x.ID)??0) + 1;
+                uni.ID = (Database.Units.Max(x => (int?)x.ID) ?? 0) + 1;
                 xmlUni.CreateOrUpdateUnite(uni);
-                //Database.Units.Add(uni);
             }
             else
             {
@@ -42,33 +39,29 @@ namespace StoreManagement.ViewModel
                 xmlUni.CreateOrUpdateUnite(uni);
                 //Database.Units[index].Name = uni.Name;
                 //Database.Units[index].PerantID = uni.PerantID;
-                
+
             }
             New();
             MessageBox.Show("It has been saved!!");
         }
-
         public void Delete()
         {
             if (MessageBox.Show(text: "It will be deleted!!....Do You want to continue?", caption: "Delete", icon: MessageBoxIcon.Question, buttons: MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 if (ValidateData())
                 {
-                    //Database.Units.Remove(uni);
                     xmlUni.DeleteUnite(uni);
                     MessageBox.Show("It has successfully deleted!");
                 }
-                else 
+                else
                     MessageBox.Show("It cannot be deleted Becuase it connected to other Products!");
 
             }
         }
-
         public void New()
         {
             uni = new Unites() { };
         }
-
         public void RefreshData()
         {
             throw new NotImplementedException();
@@ -78,7 +71,6 @@ namespace StoreManagement.ViewModel
             if (Database.Products.Where(x => x.UnitID == uni.ID).Count() > 0 || Database.Units.Where(x => x.PerantID == uni.ID).Count() > 0) return false;
             else return true;
         }
-
         #endregion
     }
 }

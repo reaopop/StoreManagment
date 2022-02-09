@@ -29,7 +29,6 @@ namespace StoreManagement.View
             InitializeComponent();
             Pro = Database.Products.FirstOrDefault(x => x.ID == ID);
             GetData();
-
         }
         #endregion
 
@@ -51,10 +50,9 @@ namespace StoreManagement.View
             Delete();
             newToolStripMenuItem.PerformClick();
         }
-
         private void frm_AddProducts_Load(object sender, EventArgs e)
         {
-            
+
             txt_ID.ReadOnly = true;
             New();
             GetData();
@@ -62,20 +60,18 @@ namespace StoreManagement.View
             dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
 
         }
-
         private void DataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 0) return;
             var row = dataGridView1.SelectedRows[0];
-            
-            
-                txt_ID.Text = row.Cells[0].Value.ToString();
-                txt_Name.Text = row.Cells[1].Value.ToString();
-                txt_BuyPrice.Text = row.Cells[2].Value.ToString();
-                txt_SellPrice.Text = row.Cells[3].Value.ToString();
-                txt_Quantity.Text = row.Cells[4].Value.ToString();
-                cmb_Unite.SelectedItem =Database.Units.FirstOrDefault(x=>x.ID == Convert.ToInt32(row.Cells[5].Value));
-            Pro = Database.Products.FirstOrDefault(x=> x.ID == Convert.ToInt32(row.Cells[0].Value));
+
+            txt_ID.Text = row.Cells[0].Value.ToString();
+            txt_Name.Text = row.Cells[1].Value.ToString();
+            txt_BuyPrice.Text = row.Cells[2].Value.ToString();
+            txt_SellPrice.Text = row.Cells[3].Value.ToString();
+            txt_Quantity.Text = row.Cells[4].Value.ToString();
+            cmb_Unite.SelectedItem = Database.Units.FirstOrDefault(x => x.ID == Convert.ToInt32(row.Cells[5].Value));
+            Pro = Database.Products.FirstOrDefault(x => x.ID == Convert.ToInt32(row.Cells[0].Value));
         }
         #endregion
 
@@ -83,12 +79,12 @@ namespace StoreManagement.View
         void SetData()
         {
             Pro.ID = Convert.ToInt32(txt_ID.Text.Trim());
-            Pro.Name = txt_Name.Text.Trim() ;
-            Pro.BuyPrice = Convert.ToDouble(txt_BuyPrice.Text.Trim()) ;
-            Pro.SellPrice = Convert.ToDouble(txt_SellPrice.Text.Trim()) ;
-            Pro.quantity = Convert.ToInt32(txt_Quantity.Text.Trim()) ;
-            Pro.UnitID = ((Unites)cmb_Unite.SelectedItem).ID ;
-            Pro.descritption = "" ;
+            Pro.Name = txt_Name.Text.Trim();
+            Pro.BuyPrice = Convert.ToDouble(txt_BuyPrice.Text.Trim());
+            Pro.SellPrice = Convert.ToDouble(txt_SellPrice.Text.Trim());
+            Pro.quantity = Convert.ToInt32(txt_Quantity.Text.Trim());
+            Pro.UnitID = ((Unites)cmb_Unite.SelectedItem).ID;
+            Pro.descritption = "";
         }
         void GetData()
         {
@@ -101,17 +97,15 @@ namespace StoreManagement.View
 
             RefreshForm();
         }
-
         void RefreshForm()
         {
             cmb_Unite.Items.Clear();
             cmb_Unite.Items.AddRange(Database.Units.ToArray());
             cmb_Unite.DisplayMember = nameof(Unites.Name);
             cmb_Unite.ValueMember = nameof(Unites.ID);
-            dataGridView1.DataSource = Database.Products.Select(x=> new { x.ID,x.Name,x.BuyPrice,x.SellPrice,x.quantity,x.UnitID}).ToList();
+            dataGridView1.DataSource = Database.Products.Select(x => new { x.ID, x.Name, x.BuyPrice, x.SellPrice, x.quantity, x.UnitID }).ToList();
         }
         #endregion
 
-        
     }
 }

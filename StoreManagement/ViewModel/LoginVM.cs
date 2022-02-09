@@ -8,15 +8,13 @@ using System.Windows.Forms;
 
 namespace StoreManagement.ViewModel
 {
-    public class LoginVM:Form,IFormMain
+    public class LoginVM : Form, IFormMain
     {
         #region Constractor
         public LoginVM()
         {
 
         }
-
-
         #endregion
 
         #region MainProperty
@@ -28,17 +26,14 @@ namespace StoreManagement.ViewModel
         {
             throw new NotImplementedException();
         }
-
         public void Delete()
         {
             throw new NotImplementedException();
         }
-
         public void New()
         {
             throw new NotImplementedException();
         }
-
         public void RefreshData()
         {
             throw new NotImplementedException();
@@ -49,7 +44,6 @@ namespace StoreManagement.ViewModel
             Master.ThisUser = Database.Users.FirstOrDefault(x => x.UserName == UserName && x.Password == password);
             return (Result > 0);
         }
-
         bool IFormMain.Validate()
         {
             return true;
